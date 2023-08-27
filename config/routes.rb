@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
-  root 'pages#home'
-  get 'login', to: 'pages#login'
+  
+  
+  root 'home#index'
+
+  get 'home/profile'
+
+  get 'start/sign_in'
+  get 'start/sign_up'
+
 end

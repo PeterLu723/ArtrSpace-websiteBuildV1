@@ -1,0 +1,100 @@
+<style>
+ .form-control:focus {
+   border-color: #564592;
+   box-shadow: 0 0 0 0.2rem #BDAAFF;
+}
+
+input[type=email] {
+  border-radius:5px;
+  max-height:30px;
+  border-color: #564592;
+  
+}
+
+input[type=password] {
+  border-radius: 5px;
+  max-height:30px;
+  border-color: #564592;
+  
+}
+
+.loginForm{
+    border:none; 
+    max-width:400px; 
+    margin:auto; 
+    padding-left:20px; 
+    padding-right:20px; 
+    padding-top:20px; 
+    background-color:#F1EDFF; 
+    border-radius:10px"
+}
+
+.ORdiv {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.05em;
+   margin: 10px 0 20px; 
+} 
+
+.ORdiv span { 
+    background-color:#F1EDFF; 
+    padding:0 10px; 
+    font-size:12px;
+}
+
+a {
+    text-decoration: none ;
+    color:white;
+}
+</style>
+
+    <div class="bg-image">
+        <div style="border:none; position:fixed; z-index:-1">
+            <%= image_tag "skyBG"%><br>
+
+        </div>
+    </div>
+
+<div class="container-fluid" style="padding-top:50px; ">
+    <form  class="loginForm" style="border-radius:25px;">
+    <div style="border:none;  text-align:center">
+    <%= image_tag "ArtrCircle.png", :size => "75x75"%><br>
+   
+    </div>
+
+    <div class="mt-2"style="font-size:30px; font-weight:bold;">Welcome to Artr</div>
+    <div style="font-size:20px;">Log in to your account.</div>
+        <!-- Email input -->
+        <label class="sr-only mt-4" style="color:grey; font-size:15px">Email Address</label>
+        <input type="email"  class="form-control mb-3 py-3"/>
+        
+        <!-- Password input -->
+        <label class="sr-only" style="color:grey" ; font-size:15px">Password</label>
+        <input type="password"  class="form-control mb-3 py-3"/>
+       
+        <!-- Submit button -->
+        <div style="text-align:center">
+            <button type="button" class="btn px-4 mb-4" style="background-color:#564592; color:white; border-radius: 20px; font-weight:bold;">Log In</button>
+        </div>
+        <div class="form-divider" style="text-align:center">
+            <div class="ORdiv"><span>OR</span>
+        </div>
+        
+        <div style="text-align:center">
+            <button type="button" class="btn px-5 py-1 mt-3 mb-4" style="border-width:3px; border-color:#564592 ;color:#564592; border-radius: 20px; font-weight:bold;"> Sign In With Google</button>
+        </div>
+        <!-- Register buttons -->
+            <p style="font-size: 20px; font-weight:500"> New to Artr?</p>
+            <button type="button" class="btn px-4 mb-4" style="background-color:#564592;border-radius: 20px; font-weight:bold;">
+                <!-- click takes to sign up page for new users -->
+               <a><%= link_to "Sign Up", "/start/sign_up" %></a> 
+            </button>
+        </div>
+    </form>
+    <footer>
+      <%= render 'layouts/footer'%>
+    </footer>
+
+</div>
+
